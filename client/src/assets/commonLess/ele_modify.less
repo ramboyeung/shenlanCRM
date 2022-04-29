@@ -1,0 +1,62 @@
+// 解决element-ui 表格表头与表格竖线篡位的问题 👇
+/deep/body .el-table th.gutter {
+  display: table-cell !important; 
+}
+/deep/body .el-table colgroup.gutter {
+  /* 修改element表头错位的问题  */
+  display: table-cell !important;
+}
+
+//修改element ui的表格边框样式
+/deep/.el-table td,
+/deep/.el-table th.is-leaf,
+/deep/.el-table--border,
+/deep/.el-table--group {
+  border-color: #c0c4cc;
+}
+/deep/.el-table--border::after,
+/deep/.el-table--group::after,
+/deep/.el-table::before {
+  background-color: #c0c4cc;
+}
+
+/*checkbox边框颜色*/
+/deep/.el-checkbox__inner {
+  border-color: #c0c4cc;
+}
+/deep/.el-input__inner {
+  border-color: #c0c4cc;
+}
+/*table边框颜色*/
+/deep/.el-table--border:after,
+/deep/.el-table--group:after,
+/deep/.el-table:before {
+  background-color: #c0c4cc;
+}
+/deep/.el-table--border,
+/deep/.el-table--group {
+  border-color: #c0c4cc;
+}
+/deep/.el-table td,
+/deep/.el-table th.is-leaf {
+  border-bottom: 1px solid #c0c4cc;
+}
+
+/deep/.el-table--border th,
+/deep/.el-table--border th.gutter:last-of-type {
+  border-bottom: 1px solid #c0c4cc;
+}
+
+.el-table--border td,
+/deep/.el-table--border th {
+  border-right: 1px solid #c0c4cc;
+}
+
+.el-table--border td,
+/deep/.el-table--border th {
+  border-left: 1px solid #c0c4cc;
+}
+.el-table--border td,
+/deep/.el-table--border th {
+  border-top: 1px solid #c0c4cc !important;
+}
